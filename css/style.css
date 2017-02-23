@@ -1,0 +1,70 @@
+body, ul, dl, dd, dt, ol, li, p, h1, h2, h3, h4, h5, h6, textarea, form, select, fieldset, table, td, div, input {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;
+}
+html{
+    height: 100%;
+}
+body{
+    background: #88C2FF;
+}
+@-webkit-keyframes cloudy {
+	50% { -webkit-transform: translateY(-20px); transform: translateY(-20px); }
+}
+@keyframes cloudy {
+	50% { -webkit-transform: translateY(-20px); transform: translateY(-20px); }
+}
+@-webkit-keyframes cloudy_shadow {
+	50% { -webkit-transform: translateY(20px) scale(1); transform: translateY(20px) scale(1); opacity:.05; }
+}
+@keyframes cloudy_shadow {
+	50% { -webkit-transform: translateY(20px) scale(1); transform: translateY(20px) scale(1); opacity:.05; }
+}
+.cloudAI-wrapper{
+	position: relative;
+	margin-top: 150px;
+}
+.cloudAI-head{
+	-webkit-animation: cloudy 5s ease-in-out infinite;
+    animation: cloudy 5s ease-in-out infinite;
+	position: absolute;
+	left: 30%;
+	width: 200px;
+	height: 200px;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: #FFFFFF 155px -55px 0 -5px, #FFFFFF 55px -85px, #FFFFFF 80px 50px, #FFFFFF 160px 45px 0 -10px, #FFFFFF 255px 15px 0 -5px;
+}
+.cloudAI-head::after{
+	-webkit-animation: cloudy_shadow 5s ease-in-out infinite;
+    animation: cloudy_shadow 5s ease-in-out infinite;
+    background: #000000;
+    border-radius: 50%;
+    content: '';
+    height: 30px;
+    width: 250px;
+    opacity: 0.2;
+    position: absolute;
+    left: 100px;
+    bottom: -130px;
+    -webkit-transform: scale(.7);
+    -ms-transform: scale(.7);
+    transform: scale(.7);
+}
+.cloudAI-face::before,.cloudAI-face::after{
+	display: block;
+	content: '';
+	width: 20px;
+	height: 30px;
+	background: #000;
+	position: absolute;
+	border-radius: 70%;
+	top: 40px;
+}
+.cloudAI-face::before{
+	left: 50%;
+}
+.cloudAI-face::after{
+	left: 120%;
+}
